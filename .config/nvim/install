@@ -1,0 +1,12 @@
+#!/bin/bash
+mkdir -p ~/.config/nvim/plugin
+mkdir -p ~/.config/nvim/after/plugin
+mkdir -p ~/.config/nvim/colors
+
+for f in `find . -regex ".*\.vim$"`; do
+  rm -rf ~/.config/nvim/$f
+  echo $f
+  file=`echo $f | cut -c 3-`
+  echo $file
+  ln -s ~/.dotfiles/.config/nvim/$file ~/.config/nvim/$file
+done
