@@ -69,11 +69,27 @@ nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 inoremap jk <ESC>
-"nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
-" Use ctrl-[hjkl] to select the active split!
+"nnoremap <C-n> :NERDTreeToggle<CR>
+ "" Start NERDTree and leave the cursor in it.
+
+"autocmd VimEnter * NERDTree
+"let g:NERDTreeGitStatusUseNerdFonts = 1
+"let g:NERDTreeGitStatusIndicatorMapCustom = {
+                "\ 'Modified'  :'M',
+                "\ 'Staged'    :'✚',
+                "\ 'Untracked' :'✭',
+                "\ 'Renamed'   :'➜',
+                "\ 'Unmerged'  :'═',
+                "\ 'Deleted'   :'✖',
+                "\ 'Dirty'     :'✗',
+                "\ 'Ignored'   :'☒',
+                "\ 'Clean'     :'✔︎',
+                "\ 'Unknown'   :'?',
+                "\ }
+
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>

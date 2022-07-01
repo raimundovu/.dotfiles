@@ -71,15 +71,46 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
 
+nvim_lsp.tailwindcss.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html.twig","twig", "php", "scss", "html"}
+}
+
 nvim_lsp.intelephense.setup {
   on_attach = on_attach,
   filetypes = { "php" },
+  settings = {
+    intelephense = {
+      telemetry = {
+        enabled = false
+      },
+      completion = {
+        triggerParameterHints = true,
+        insertUseDeclaration = true
+      },
+      trace = {
+        server = "messages"
+      },
+
+      diagnostics = {
+        undefinedClassConstants = false,
+        undefinedFunctions = false,
+        undefinedConstants = false,
+        undefinedProperties = false,
+        undefinedTypes = false,
+        undefinedMethods = false,
+      }
+    }
+  }
+
 }
 
 nvim_lsp.tsserver.setup {
@@ -90,7 +121,7 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc' },
+  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc', 'twig' },
   init_options = {
     linters = {
       eslint = {

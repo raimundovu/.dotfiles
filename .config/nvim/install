@@ -10,3 +10,6 @@ for f in `find . -regex ".*\.vim$"`; do
   echo $file
   ln -s ~/.dotfiles/.config/nvim/$file ~/.config/nvim/$file
 done
+
+#rm -rf ~/.config/nvim/snippets
+#ln -s ~/.dotfiles/.config/nvim/snippets ~/.config/nvim/snippets
