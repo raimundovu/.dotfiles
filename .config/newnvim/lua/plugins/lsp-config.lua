@@ -3,7 +3,7 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -12,25 +12,32 @@ return {
         ensure_installed = {
           "lua_ls",
           "intelephense",
-          "tsserver"
-        }
+          "tsserver",
+        },
       })
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
+    lazy = false,
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.intelephense.setup({})
-      lspconfig.tsserver.setup({})
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.intelephense.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.tsserver.setup({
+        capabilities = capabilities,
+      })
 
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
-      vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {})
-      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
-
-
-    end
-  }
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+    end,
+  },
 }
