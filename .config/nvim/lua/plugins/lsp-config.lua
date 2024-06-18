@@ -13,6 +13,7 @@ return {
           "lua_ls",
           "intelephense",
           "tsserver",
+          "yamlls"
         },
       })
     end,
@@ -24,6 +25,7 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
+
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
@@ -34,9 +36,15 @@ return {
         capabilities = capabilities,
       })
 
+      lspconfig.yamlls.setup({
+        capabilities = capabilities,
+      })
+
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+      vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end,
   },
