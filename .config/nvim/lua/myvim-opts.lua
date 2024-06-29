@@ -21,6 +21,7 @@ vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', {silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>q', ':q<CR>', {silent = true})
 
 
+vim.api.nvim_set_keymap('v', '<Leader>v', '"*y<CR>', {silent = true})
 
 -- neotest 
 -- Run current test
