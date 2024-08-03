@@ -9,6 +9,8 @@ return {
 				null_ls.builtins.diagnostics.phpstan,
 				null_ls.builtins.formatting.phpcsfixer,
         null_ls.builtins.formatting.yamlfix,
+        null_ls.builtins.formatting.gofumpt,
+        null_ls.builtins.formatting.goimports_reviser,
 			},
 		})
 
