@@ -8,6 +8,7 @@ This is my basic configuration for setting up my configuration.
     brew install lazygit
     brew install --cask alacritty
     brew install powerlevel10k
+    brew install bat
 ```
 
 
@@ -27,4 +28,4 @@ cp -rf ~/.dotfiles/.config/path-to-program  ~/.config/
 
 ## TODO
 
-- [] Check about stow for dotfiles managing.
+- [ ] Check about stow for dotfiles managing.
