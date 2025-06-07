@@ -2,7 +2,7 @@
 
 This is my basic configuration for setting up my configuration.
 
-## Things I like to install.
+##  Commands for MACOS (🤮).
 
 ```bash
     brew install lazygit
