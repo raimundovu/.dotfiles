@@ -1,57 +1,36 @@
-// __        __          _                 
-// \ \      / /_ _ _   _| |__   __ _ _ __  
-//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
-//   \ V  V / (_| | |_| | |_) | (_| | |    
-//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
-//                 |___/                   
-//  
-// by Stephan Raabe (2023) 
-// ----------------------------------------------------- 
-//
 {
-    // General Settings
+  
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  // Load Modules
+  "include": [
+      "~/.config/waybar/modules.json"
+  ],
 
-    // Position TOP
-    "layer": "top",
-    "margin-bottom": 0,
-    "margin-left": 15,
-    "margin-right": 15,    
-    "spacing": 0,
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces", "idle_inhibitor", "pulseaudio","custom/updates"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["hyprland/submap", "network","group/hardware", "tray", "custom/notification","custom/exit","clock"],
 
-    // Load Modules
-    "include": [
-        "~/.config/ml4w/settings/waybar-quicklinks.json",
-        "~/.config/waybar/modules.json"
-    ],
+  "keyboard-state": {
+      "numlock": false,
+      "capslock": false,
+      "format": "{name} {icon}",
+      "format-icons": {
+          "locked": "",
+          "unlocked": ""
+      }
+  },
 
-    // Modules Left
-    "modules-left": [
-        "custom/appmenu",
-        "custom/settings",
-        "wlr/taskbar",
-        "group/quicklinks",
-        "hyprland/window",
-        "custom/starter"
-    ],
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": "",
+        "deactivated": ""
+    }
+  }
 
-    // Modules Center
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
-
-    // Modules Right    
-    "modules-right": [
-        "custom/chatgpt",
-        //"custom/updates",
-        "pulseaudio",
-        "network",
-        "group/hardware",
-        //"custom/cliphist",
-        "custom/hypridle",
-        "custom/hyprshade",
-        //"tray",
-        "custom/exit",
-        //"custom/ml4w-welcome",
-        "clock"
-    ]
 }
+

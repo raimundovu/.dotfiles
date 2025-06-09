@@ -29,3 +29,4 @@ cp -rf ~/.dotfiles/.config/path-to-program  ~/.config/
 ## TODO
 
 - [ ] Check about stow for dotfiles managing.
+- [ ] KEEP RICING ARCH LINUX
