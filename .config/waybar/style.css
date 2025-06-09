@@ -1,20 +1,19 @@
-@define-color base00 #181818;
-@define-color base01 #2b2e37;
-@define-color base02 #3b3e47;
-@define-color base03 #585858;
-@define-color base04 #b8b8b8;
-@define-color base05 #d8d8d8;
-@define-color base06 #e8e8e8;
-@define-color base07 #f8f8f8;
-@define-color base08 #ab4642;
-@define-color base09 #dc9656;
-@define-color base0A #f7ca88;
-@define-color base0B #a1b56c;
-@define-color base0C #86c1b9;
-@define-color base0D #7cafc2;
-@define-color base0E #ba8baf;
-@define-color base0F #a16946;
-
+@define-color base00 #292d3e;   /* Background */
+@define-color base01 #434758;   /* Darker background */
+@define-color base02 #2b2e37;   /* Slightly lighter than base00 */
+@define-color base03 #607c8b;   /* Comments / selection bg */
+@define-color base04 #959dcb;   /* Foreground dimmed */
+@define-color base05 #d0d0d0;   /* Foreground */
+@define-color base06 #eceef0;   /* Bright fg */
+@define-color base07 #fefefe;   /* White / brighter text */
+@define-color base08 #f07178;   /* Red */
+@define-color base09 #ffcb6b;   /* Orange / Yellow */
+@define-color base0A #ffe585;   /* Yellow (brighter) */
+@define-color base0B #c3e88d;   /* Green */
+@define-color base0C #89ddff;   /* Cyan */
+@define-color base0D #82aaff;   /* Blue */
+@define-color base0E #c792ea;   /* Magenta */
+@define-color base0F #ff8b92;   /* Additional / error-ish red */
 * {
   transition: none;
   box-shadow: none;

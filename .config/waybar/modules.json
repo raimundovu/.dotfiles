@@ -235,6 +235,7 @@
   // System
   "custom/system": {
     "format": "",
+    "icon-size": 21,
     "tooltip": false
   },
 
