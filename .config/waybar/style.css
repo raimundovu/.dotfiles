@@ -25,6 +25,9 @@
 	font-weight: 400;
   color: @base04;
   background: @base01;
+  opacity: 0.75;
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 #workspaces {
