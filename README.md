@@ -6,4 +6,4 @@
 - [ ] KEEP RICING ARCH LINUX
 - [ ] CHECK YAZI
 - [ ] SCRIPT TO MANAGE WALLPAPERS
-- [ ] maybe: qutebrowser
+- [ ] maybe: qutebrowser/rmpc
