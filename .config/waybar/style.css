@@ -27,7 +27,6 @@
   background: @base01;
   opacity: 0.75;
   transition-property: background-color;
-  transition-duration: .5s;
 }
 
 #workspaces {
