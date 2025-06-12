@@ -12,7 +12,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"intelephense",
-					"tsserver",
+					"ts_ls",
 					"yamlls",
 					"gopls",
 				},
@@ -33,7 +33,7 @@ return {
 			lspconfig.intelephense.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 
